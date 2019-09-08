@@ -1,0 +1,36 @@
+{
+  "sources": {
+    "a": {
+      "connection": "sqlite3://:memory:",
+      "table": "users",
+      "data": [
+        {
+          "id": 1,
+          "name": "ben",
+          "desc": "human person"
+        },
+        {
+          "id": 2,
+          "name": "joni",
+          "desc": "unique human"
+        }
+      ]
+    },
+    "b": {
+      "connection": "sqlite3://:memory:",
+      "table": "animals",
+      "data": [
+        {
+          "id": 1,
+          "name": "mr cuddles",
+          "isCute": false
+        },
+        {
+          "id": 2,
+          "name": "princess",
+          "isCute": true
+        }
+      ]
+    }
+  }
+}

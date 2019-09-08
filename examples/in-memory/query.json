@@ -1,0 +1,7 @@
+{
+  "aggregate": "SELECT * FROM a INNER JOIN b ON a.id=b.id WHERE b.isCute=1",
+  "data": {
+    "a": "SELECT id from users",
+    "b": "SELECT * from animals"
+  }
+}

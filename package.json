@@ -1,0 +1,54 @@
+{
+  "name": "ndmr",
+  "version": "1.0.0-alpha",
+  "description": "n-tiered map reduce for databases",
+  "main": "dist/lib/index.js",
+  "bin": "dist/index.js",
+  "scripts": {
+    "prepublishOnly": "npm run lint && npm test && npm run build",
+    "test": "jest --coverage",
+    "lint": "eslint **/*.ts",
+    "build": "tsc -p .",
+    "dist": "npm run build && pkg --out-path bin .",
+    "start": "node dist/index.js"
+  },
+  "pkg": {
+    "scripts": "dist/**/*.js"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/src/**/*.ts"
+    ],
+    "coverageReporters": [
+      "cobertura",
+      "text"
+    ],
+    "preset": "ts-jest"
+  },
+  "author": "Ben Greenier",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/jest": "^24.0.18",
+    "@types/sqlite3": "^3.1.5",
+    "@types/yargs": "^13.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.1.0",
+    "@typescript-eslint/parser": "^2.1.0",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.9.0",
+    "pkg": "^4.4.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "typescript": "3.5.x"
+  },
+  "dependencies": {
+    "conditional-reduce": "^1.2.0",
+    "debug": "^4.1.1",
+    "sqlite3": "^4.1.0",
+    "yargs": "^14.2.0"
+  }
+}
