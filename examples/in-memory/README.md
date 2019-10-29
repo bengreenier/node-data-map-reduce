@@ -8,7 +8,7 @@ To run:
 
 ```
 #
-# ensure you're in examples/in-memory database first
+# ensure you're in examples/in-memory directory first
 #
 ndmr execute
 ```
